@@ -59,7 +59,7 @@ window.onload =typewriter
         var message = document.getElementById('message').value;
 
         // Construct mailto URL
-        var mailtoLink = 'mailto:youremail@example.com?subject=Hiring Inquiry&body=' 
+        var mailtoLink = 'mailto:hubertzonyra@gmail.com?subject=Hiring Inquiry&body=' 
             + 'Name: ' + encodeURIComponent(name) 
             + '%0D%0AEmail: ' + encodeURIComponent(email) 
             + '%0D%0AMessage: ' + encodeURIComponent(message);
