@@ -50,9 +50,9 @@ window.onload =typewriter
 
 
 
-    function() {
+    (function() {
         emailjs.init("yzVSv3QCn_1SJuhoA");  // Replace with your EmailJS User ID
-    }();
+    })();
 
     document.getElementById('hireForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
