@@ -49,21 +49,20 @@ function eraseText(){
 window.onload =typewriter
 
 
-    // JavaScript to handle the form submission
+
+    (function() {
+        emailjs.init("yzVSv3QCn_1SJuhoA");  // Replace with your EmailJS User ID
+    })();
+
     document.getElementById('hireForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); // Prevent default form submission
 
-        // Get form values
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
-
-        // Construct mailto URL
-        var mailtoLink = 'mailto:hubertzonyra@gmail.com?subject=Hiring Inquiry&body=' 
-            + 'Name: ' + encodeURIComponent(name) 
-            + '%0D%0AEmail: ' + encodeURIComponent(email) 
-            + '%0D%0AMessage: ' + encodeURIComponent(message);
-
-        // Open the email client with the pre-filled data
-        window.location.href = mailtoLink;
+        // Send email via EmailJS
+        emailjs.sendForm('service_k07sji8', 'template_w20uf3p', this)
+            .then(function() {
+                document.getElementById('statusMessage').innerText = 'Message sent successfully!';
+            }, function(error) {
+                document.getElementById('statusMessage').innerText = 'Failed to send the message, please try again.';
+                console.log('Failed...', error);
+            });
     });
