@@ -50,19 +50,4 @@ window.onload =typewriter
 
 
 
-    (function() {
-        emailjs.init("yzVSv3QCn_1SJuhoA");  // Replace with your EmailJS User ID
-    })();
-
-    document.getElementById('hireForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Send email via EmailJS
-        emailjs.sendForm('service_k07sji8', 'template_w20uf3p', this)
-            .then(function() {
-                document.getElementById('statusMessage').innerText = 'Message sent successfully!';
-            }, function(error) {
-                document.getElementById('statusMessage').innerText = 'Failed to send the message, please try again.';
-                console.log('Failed...', error);
-            });
-    });
+ 
