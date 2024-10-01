@@ -47,3 +47,23 @@ function eraseText(){
 }
 
 window.onload =typewriter
+
+
+    // JavaScript to handle the form submission
+    document.getElementById('hireForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get form values
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        // Construct mailto URL
+        var mailtoLink = 'mailto:youremail@example.com?subject=Hiring Inquiry&body=' 
+            + 'Name: ' + encodeURIComponent(name) 
+            + '%0D%0AEmail: ' + encodeURIComponent(email) 
+            + '%0D%0AMessage: ' + encodeURIComponent(message);
+
+        // Open the email client with the pre-filled data
+        window.location.href = mailtoLink;
+    });
