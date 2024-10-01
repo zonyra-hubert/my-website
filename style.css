@@ -282,6 +282,39 @@ section{
     }
 }
 
+.contact-container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+#hireForm input, 
+#hireForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #077b32;
+    border-radius: 5px;
+}
+
+#hireForm button {
+    width: 50%;
+    padding: 10px;
+    background-color: #077b32;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+#hireForm button:hover {
+    background-color: white;
+    color: #077b32;
+    border: 2px solid #077b32;
+}
+
+
 
 
 
