@@ -29,4 +29,15 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+  
+    // Send the form data using EmailJS
+    emailjs.sendForm('service_k07sji8', 'template_mswk08s', this)
+      .then(function(response) {
+        alert("Success! Your message has been sent.");
+      }, function(error) {
+        alert("Failed to send the message. Error: " + error.text);
+      });
+  });
+  
